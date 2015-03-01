@@ -2,15 +2,11 @@
 
 <section id="main">
     <ul id="blog-list">
+      {{#each post in model}}
         <li class="completed">
-          <a href="Test Blog 1">Test Blog 1</a> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <button class="destroy">X</button>
+          <h2>{{post.Title}}</h2> <p>{{post.Description}}</p> <button class="destroy">X</button>
         </li>
-        <li>
-          <a href="Test Blog 2">Test Blog 2</a> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <button class="destroy">X</button>
-        </li>
-        <li>
-          <a href="Test Blog 3">Test Blog 3</a> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> <button class="destroy">X</button>
-        </li>
+      {{/each}}
     </ul>
 </section>
 
